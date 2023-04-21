@@ -2,34 +2,28 @@ package functions;
 
 public class RefactorDecompositionOfFunctions {
 
-    private static int getRandomIndex(String s) {
+    private static int calcIndex(String s) {
         return (int) Math.floor(Math.random() * s.length());
     }
-
-    private static String buildMessage(boolean isEven, char c, int i) {
-        String message = "The char [" + c + "] at index " + i;
-
-        if (isEven) {
-            message = message + " is Even";
-        } else {
-            message = message + " is Odd";
-        }
-
-        return message;
+    // messageの作成
+    private static String buildMessage(char c, int i) {
+       return  "The char [" + c + "] at index " + i;
     }
     private static String randomCharEvenOrOdd(String s) {
         // randomIndexの作成
-        int randomIndex = getRandomIndex(s);
+        int randomIndex = calcIndex(s);
 
         // characterの作成
         char character = s.charAt(randomIndex);
 
-        // isEvenの判定
-        boolean isEven = (character % 2 == 0);
+        String message = buildMessage(character, randomIndex);
 
-        // 出力文字の組み立て（isEvenとcharacterとrandomIndex）
-
-        return buildMessage(isEven, character, randomIndex);
+        if (character % 2 == 0) {
+            message = message + " is Even";
+        } else {
+            message = message + " is Odd";
+        }
+        return message;
     }
 
     public static void main(String[] args) {
