@@ -14,14 +14,12 @@ public class RefactorDecompositionOfFunctions {
         int randomIndex = calcIndex(s);
 
         // characterの作成
-        char character = s.charAt(randomIndex);
+        String message = buildMessage(s.charAt(randomIndex), randomIndex);
 
-        String message = buildMessage(character, randomIndex);
-
-        if (character % 2 == 0) {
-            message = message + " is Even";
+        if (s.charAt(randomIndex) % 2 == 0) {
+            message += " is Even";
         } else {
-            message = message + " is Odd";
+            message += " is Odd";
         }
         return message;
     }
