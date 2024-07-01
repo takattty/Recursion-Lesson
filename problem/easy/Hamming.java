@@ -1,7 +1,5 @@
 package problem.easy;
 
-import java.nio.charset.StandardCharsets;
-
 public class Hamming {
 
     public static void main(String[] args) {
