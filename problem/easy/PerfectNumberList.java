@@ -29,6 +29,8 @@ public class PerfectNumberList {
     }
 
     // 完全数の確認
+    // 完全数 = 約数のうち自分を除く残りの値の足し合わせが、自分と一致する数
+    // ex) 6 = 1, 2, 3, 6 → 1+2+3=6
     private static boolean isPerfectNumber(int i) {
        return true;
     }
