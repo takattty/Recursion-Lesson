@@ -11,6 +11,6 @@ public class DecimalToBinary {
     }
 
     public static String decimalToBinary(int decNumber){
-        return Integer.toHexString(decNumber).toUpperCase();
+        return Integer.toString(decNumber, 2);
     }
 }
