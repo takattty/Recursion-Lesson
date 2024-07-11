@@ -1,10 +1,15 @@
 package problem.easy;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class PerfectNumberList {
 
     public static void main(String[] args) {
+        System.out.println(perfectNumberList(1));
         System.out.println(perfectNumberList(3));
         System.out.println(perfectNumberList(6));
+        System.out.println(perfectNumberList(8));
         System.out.println(perfectNumberList(28));
         System.out.println(perfectNumberList(100));
         System.out.println(perfectNumberList(496));
@@ -13,26 +18,40 @@ public class PerfectNumberList {
     }
 
     public static String perfectNumberList(int n){
-        StringBuffer sb = new StringBuffer();
+        List<String> list = new ArrayList<>();
 
-        for (int i = 2; i <= n; i++) {
+        for (int i = 1; i <= n; i++) {
             if (isPerfectNumber(i)) {
-                sb.append(i).append("-");
+                list.add(String.valueOf(i));
             }
         }
 
-        if (sb.charAt(sb.length() - 1) == '-') {
-            sb.deleteCharAt(sb.length() - 1);
+        if (list.isEmpty()) {
+            return "none";
+        } else {
+            return String.join("-", list);
         }
-
-        return sb.toString();
     }
 
-    // 完全数の確認
-    // 完全数 = 約数のうち自分を除く残りの値の足し合わせが、自分と一致する数
-    // ex) 6 = 1, 2, 3, 6 → 1+2+3=6
-    // 今回はこの完全数だけを抜き取って返す関数を返す
-    private static boolean isPerfectNumber(int i) {
-       return true;
+    private static boolean isPerfectNumber(int param) {
+        List<Integer> list = new ArrayList<>();
+
+        for (int i=1; i<=param; i++) {
+            if (param % i == 0) {
+                list.add(i);
+            }
+        }
+
+        int result = 0;
+        int lastNumber = 0;
+        for (int i=0; i<list.size(); i++) {
+            if (i == list.size() -1) {
+                lastNumber = list.get(i);
+            } else {
+                result = result + list.get(i);
+            }
+        }
+
+        return result == lastNumber;
     }
 }
