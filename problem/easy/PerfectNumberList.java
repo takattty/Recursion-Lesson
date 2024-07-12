@@ -1,5 +1,7 @@
 package problem.easy;
 
+import java.sql.Time;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,9 +17,12 @@ public class PerfectNumberList {
         System.out.println(perfectNumberList(496));
         System.out.println(perfectNumberList(1000));
         System.out.println(perfectNumberList(10000));
+        System.out.println(perfectNumberList(100000)); // 3秒くらい
+        System.out.println(perfectNumberList(1000000)); // 5分くらい
     }
 
     public static String perfectNumberList(int n){
+        System.out.println("start:  " + LocalDateTime.now());
         List<String> list = new ArrayList<>();
 
         for (int i = 1; i <= n; i++) {
@@ -27,8 +32,10 @@ public class PerfectNumberList {
         }
 
         if (list.isEmpty()) {
+            System.out.println("finish: " + LocalDateTime.now());
             return "none";
         } else {
+            System.out.println("finish: " + LocalDateTime.now());
             return String.join("-", list);
         }
     }
