@@ -18,7 +18,9 @@ public class PerfectNumberList {
         System.out.println(perfectNumberList(1000));
         System.out.println(perfectNumberList(10000));
         System.out.println(perfectNumberList(100000)); // 3秒くらい
-        System.out.println(perfectNumberList(1000000)); // 5分くらい
+        System.out.println(perfectNumberList(200000)); // 13秒くらい
+        System.out.println(perfectNumberList(300000)); // 28秒くらい
+//        System.out.println(perfectNumberList(1000000)); // 5分くらい
     }
 
     public static String perfectNumberList(int n){
