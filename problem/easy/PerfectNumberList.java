@@ -23,7 +23,6 @@ public class PerfectNumberList {
     }
 
     public static String perfectNumberList(int n) {
-        System.out.println("start:  " + LocalDateTime.now());
         List<String> list = new ArrayList<>();
 
         for (int i = 1; i <= n; i++) {
@@ -33,10 +32,8 @@ public class PerfectNumberList {
         }
 
         if (list.isEmpty()) {
-            System.out.println("finish: " + LocalDateTime.now());
             return "none";
         } else {
-            System.out.println("finish: " + LocalDateTime.now());
             return String.join("-", list);
         }
     }
