@@ -28,6 +28,12 @@ public class RecursiveDigitsAdded {
 //            result += Integer.parseInt(String.valueOf(c));
 //        }
 //        return String.valueOf(result);
+
+        // c -> c - '0'の部分が何してるか全然わからん
+        // charsはIntStreamを返しているので、intでの計算が行われている
+        // つまりint - intの計算をしていると思えばいい
+        // このintは'0' ~ '9'までを取りうる値。
+        // 0 - '0'だと-48で、0 - '1'だと-49になる。charとintは互換性がある。
         return String.valueOf(Long.toString(digits).chars().map(c -> c - '0').sum());
     }
 }
