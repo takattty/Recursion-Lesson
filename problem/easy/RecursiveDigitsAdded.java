@@ -30,10 +30,6 @@ public class RecursiveDigitsAdded {
 //        return String.valueOf(result);
 
         // c -> c - '0'の部分が何してるか全然わからん→ある値をchar型で表現してしまったので、それを元の値に直している
-        // charsはIntStreamを返しているので、intでの計算が行われている
-        // つまりint - intの計算をしていると思えばいい
-        // このintは'0' ~ '9'までを取りうる値。
-        // 0 - '0'だと-48で、0 - '1'だと-49になる。charとintは互換性がある。
         // Long.toString()で文字列にして、chars()で各桁の値を取り出しやすい形（char）に、
         // そのままだとchar型の値（ある文字に割り当てられたchar型の値の方）で計算をしてしまうので、
         // map()の処理でdigitsで扱っている数値の方に直して、sum()で計算。
