@@ -32,10 +32,8 @@ public class Rgb {
     public String getColorShade() {
         if (red == green && green == blue) return "grayscale";
 
-//        var map = Map.of("red", red, "green", green, "blue", blue);
 //        int biggestNumber = map.values().stream().reduce((first, second) -> first > second ? first : second).get();
 //        String result = "";
-//
 //        for (var es : map.entrySet()) {
 //            if (biggestNumber == es.getValue()) {
 //                result = es.getKey();
