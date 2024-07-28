@@ -22,7 +22,7 @@ public class BankAccount {
     }
 
     public int withdrawMoney(int withdrawAmount) {
-        var maxWithdrawAmount = savings * 0.2;
+        var maxWithdrawAmount = calcMaxWithdrawAmount();
 
         if (withdrawAmount >= maxWithdrawAmount) {
             return savings -= (int) maxWithdrawAmount;
@@ -33,6 +33,10 @@ public class BankAccount {
 
     public double pastime(int days) {
         return savings + (days * 0.25);
+    }
+
+    private double calcMaxWithdrawAmount() {
+        return savings * 0.2;
     }
 
     public static void main(String[] args) {
