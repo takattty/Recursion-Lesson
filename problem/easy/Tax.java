@@ -1,7 +1,5 @@
 package problem.easy;
 
-import java.time.LocalDate;
-
 public class Tax {
   private static double federalTax = 0.21;
   private static double azTax = 0.049;
@@ -11,13 +9,6 @@ public class Tax {
   private static double otherTax = 0.05;
 
   public static int calculateCorporationTax(String state, int year, int profit) {
-    // double stateTaxPrice = profit * calcStateTax(state);
-
-    // if (isLeapDay(year)) {
-    // return (int) Math.ceil(stateTaxPrice);
-    // }
-    // return (int) Math.ceil((profit * federalTax) + stateTaxPrice);
-
     if (isLeapDay(year)) {
       return (int) Math.ceil(profit * calcStateTax(state));
     }
@@ -39,8 +30,6 @@ public class Tax {
   }
 
   private static boolean isLeapDay(int year) {
-    if (year % 4 == 0 && (year % 100 != 0 || year % 400 == 0))
-      return true;
-    return false;
+      return year % 4 == 0 && (year % 100 != 0 || year % 400 == 0);
   }
 }
