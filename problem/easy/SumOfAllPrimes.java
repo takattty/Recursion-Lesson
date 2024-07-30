@@ -27,8 +27,8 @@ public class SumOfAllPrimes {
     public static boolean isPrime(int number){
         boolean isPrime = true;
 
-        if (number == 1) return !isPrime;
-        if (number == 2) return isPrime;
+        if (number == 1) return false;
+        if (number == 2) return true;
 
         for (int i = 2; i < number; i++) {
             if (number % i == 0) {
