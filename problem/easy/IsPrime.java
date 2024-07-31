@@ -36,7 +36,7 @@ public class IsPrime {
         boolean isPrime = true;
 
         if (number == 1) {
-            return !isPrime;
+            return false;
         }
 
         if (number == 2) {
