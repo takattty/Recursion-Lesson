@@ -23,8 +23,7 @@ public class Restran {
 
   private static double calcTotalPrice(int cost) {
     double salesTax = 0.1;
-    double totalPrice = cost * (1 + salesTax + calcChip(cost));
-    return totalPrice;
+      return cost * (1 + salesTax + calcChip(cost));
   }
 
   protected static double calcChip(int cost) {
