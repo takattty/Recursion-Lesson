@@ -16,17 +16,13 @@ public class Tax {
   }
 
   private static double calcStateTax(String state) {
-    if (state.equals("AZ")) {
-      return azTax;
-    } else if (state.equals("CA")) {
-      return caTax;
-    } else if (state.equals("TX")) {
-      return txTax;
-    } else if (state.equals("NC")) {
-      return ncTax;
-    } else {
-      return otherTax;
-    }
+      return switch (state) {
+          case "AZ" -> azTax;
+          case "CA" -> caTax;
+          case "TX" -> txTax;
+          case "NC" -> ncTax;
+          default -> otherTax;
+      };
   }
 
   private static boolean isLeapDay(int year) {
