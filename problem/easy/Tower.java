@@ -14,19 +14,14 @@ public class Tower {
   }
 
   private static double calcGravity(String planet) {
-    if (planet.equals("Earth")) {
-      return 9.8;
-    } else if (planet.equals("Jupiter")) {
-      return 24.79;
-    } else if (planet.equals("Mars")) {
-      return 3.71;
-    } else if (planet.equals("Pluto")) {
-      return 0.58;
-    } else if (planet.equals("Moon")) {
-      return 1.62;
-    } else {
-      return 0;
-    }
+      return switch (planet) {
+          case "Earth" -> 9.8;
+          case "Jupiter" -> 24.79;
+          case "Mars" -> 3.71;
+          case "Pluto" -> 0.58;
+          case "Moon" -> 1.62;
+          default -> 0;
+      };
   }
 
   private static String fearLevel(double speed) {
