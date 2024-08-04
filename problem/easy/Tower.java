@@ -27,9 +27,9 @@ public class Tower {
   private static String fearLevel(double speed) {
     if (speed >= 80) {
       return "terrified";
-    } else if (speed >= 60 && speed < 80) {
+    } else if (speed >= 60) {
       return "frighten";
-    } else if (speed >= 40 && speed < 60) {
+    } else if (speed >= 40) {
       return "scared";
     } else {
       return "afraid";
