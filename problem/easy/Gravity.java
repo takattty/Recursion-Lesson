@@ -23,7 +23,7 @@ public class Gravity {
 //    }
 
         return switch (planet) {
-            case "Earch" -> earthGravity;
+            case "Earth" -> earthGravity;
             case "Jupiter" -> jupiterGravity;
             case "Mercury" -> mercuryGravity;
             default -> otherGravity;
