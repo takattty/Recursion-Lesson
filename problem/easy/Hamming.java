@@ -1,5 +1,7 @@
 package problem.easy;
 
+import java.util.stream.IntStream;
+
 public class Hamming {
 
     public static void main(String[] args) {
@@ -11,14 +13,19 @@ public class Hamming {
     }
 
     public static int hammingDistanceInString(String string1, String string2){
-        int count = 0;
+//        int count = 0;
+//
+//        for (int i = 0; i<string1.length(); i++) {
+//            if (string1.charAt(i) != (string2.charAt(i))) {
+//                count++;
+//            }
+//        }
+//
+//        return count;
 
-        for (int i = 0; i<string1.length(); i++) {
-            if (string1.charAt(i) != (string2.charAt(i))) {
-                count++;
-            }
-        }
-
-        return count;
+        // リファクタ
+        return (int) IntStream.range(0, string1.length())
+                .filter(i -> string1.charAt(i) != string2.charAt(i))
+                .count();
     }
 }
