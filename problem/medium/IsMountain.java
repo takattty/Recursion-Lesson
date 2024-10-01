@@ -34,11 +34,10 @@ public class IsMountain {
         int before = 0;
 
         for (int i = 0; i < height.length; i++) {
+            // 同じ値なら必ずfalseを返す
+            if (before == height[i]) return false;
             if (isToTop) {
                 // 登り続けている処理
-                // 同じ値
-                if (before == height[i]) return false;
-
                 // 初っ端から下がっている時
                 if (i == 1 && before > height[i]) return false;
 
@@ -48,18 +47,14 @@ public class IsMountain {
                     isToTop = false;
                 }
                 // 前の値が今の値より小さい時
-                before = height[i];
             } else {
                 // 下がり続けている処理
-                // 同じ値
-                if (before == height[i]) return false;
-
                 // 前の値が今の値より小さい時
                 if (before < height[i]) {
                     return false;
                 }
-                before = height[i];
             }
+            before = height[i];
         }
 
         // isToTopがtrueのままならfalseを返し（登り続けているなので）、それ以外はtrueを返す
