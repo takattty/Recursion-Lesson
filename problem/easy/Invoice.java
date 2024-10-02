@@ -1,8 +1,8 @@
 package problem.easy;
 
 public class Invoice {
-    String invoiceNumber;
-    InvoiceItem invoiceItemHead;
+    final String invoiceNumber;
+    final InvoiceItem invoiceItemHead;
 
     public Invoice(String invoiceNumber, InvoiceItem invoiceItemHead) {
         this.invoiceNumber = invoiceNumber;

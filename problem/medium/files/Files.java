@@ -6,10 +6,10 @@ public class Files {
     static final String FILE_EXTENSION_MB = "MB";
     static final String FILE_EXTENSION_GB = "GB";
 
-    String fileName;
-    String fileExtension;
+    final String fileName;
+    final String fileExtension;
     String content;
-    String parentFolder;
+    final String parentFolder;
 
 
     public Files(String fileName, String fileExtension, String content, String parentFolder) {

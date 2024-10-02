@@ -32,7 +32,7 @@ public class AllNPrimesSieve {
         }
 
         // キャッシュ内のすべてのtrueのインデックスは素数です。
-        ArrayList<Integer> primeNumbersDynamic = new ArrayList<Integer>();
+        ArrayList<Integer> primeNumbersDynamic = new ArrayList<>();
         for (int i = 2; i < cache.length; i++){
             if (cache[i]){
                 primeNumbersDynamic.add(i);

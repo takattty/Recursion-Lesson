@@ -9,14 +9,14 @@ public class RefactorDecompositionOfFunctions {
     private static String buildMessage(char c, int i) {
        return  "The char [" + c + "] at index " + i;
     }
-    private static String randomCharEvenOrOdd(String s) {
+    private static String randomCharEvenOrOdd() {
         // randomIndexの作成
-        int randomIndex = calcIndex(s);
+        int randomIndex = calcIndex("Dont't tell me lies.");
 
         // characterの作成
-        String message = buildMessage(s.charAt(randomIndex), randomIndex);
+        String message = buildMessage("Dont't tell me lies.".charAt(randomIndex), randomIndex);
 
-        if (s.charAt(randomIndex) % 2 == 0) {
+        if ("Dont't tell me lies.".charAt(randomIndex) % 2 == 0) {
             message += " is Even";
         } else {
             message += " is Odd";
@@ -25,6 +25,6 @@ public class RefactorDecompositionOfFunctions {
     }
 
     public static void main(String[] args) {
-        System.out.println(randomCharEvenOrOdd("Dont't tell me lies."));
+        System.out.println(randomCharEvenOrOdd());
     }
 }

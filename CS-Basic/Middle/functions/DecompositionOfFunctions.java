@@ -10,13 +10,10 @@ public class DecompositionOfFunctions {
         // 文字
         char character = s.charAt(randomIndex);
 
-        boolean isEven = false;
+        boolean isEven = character % 2 == 0;
 
         // codePointAt() メソッドで Unicode コードポイントを取得することができます。
         // ランダムなインデックスの文字の文字コード が偶数なら True と書き換えます
-        if(character % 2 == 0){
-            isEven = true;
-        }
 
         String message = "The char [" + character + "] at index " + randomIndex;
 

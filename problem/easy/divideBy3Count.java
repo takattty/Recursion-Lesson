@@ -1,7 +1,7 @@
 package problem.easy;
 
 public class divideBy3Count {
-    public static int divideBy3Count(int n){
+    public static int start(int n){
         return culc(n, 0);
     }
 

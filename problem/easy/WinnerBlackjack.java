@@ -32,22 +32,13 @@ public class WinnerBlackjack {
             return Integer.parseInt(inputNumber);
         }
 
-        int result = 0;
-        switch (inputNumber) {
-            case "A":
-                result = 1;
-                break;
-            case "J":
-                result = 11;
-                break;
-            case "Q":
-                result = 12;
-                break;
-            case "K":
-                result = 13;
-                break;
-        }
-        return result;
+        return switch (inputNumber) {
+            case "A" -> 1;
+            case "J" -> 11;
+            case "Q" -> 12;
+            case "K" -> 13;
+            default -> 0;
+        };
     }
 
     private static boolean judge(int playerPoint, int housePoint) {

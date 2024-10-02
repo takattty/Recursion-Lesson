@@ -1,8 +1,8 @@
 package problem.easy;
 
 public class BankAccount {
-    public String bankName;
-    public String ownerName;
+    public final String bankName;
+    public final String ownerName;
     public int savings;
 
     BankAccount(String bankName, String ownerName, int savings) {

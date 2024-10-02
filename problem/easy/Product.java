@@ -1,8 +1,8 @@
 package problem.easy;
 
 public class Product {
-    String title;
-    double price;
+    final String title;
+    final double price;
 
     Product(String title, double price) {
         this.title = title;

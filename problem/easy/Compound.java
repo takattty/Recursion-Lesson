@@ -1,8 +1,8 @@
 package problem.easy;
 
 public class Compound {
-  private static double evenNumberAnnualRate = 0.02;
-  private static double oddNumberAnnualRate = 0.03;
+  private static final double evenNumberAnnualRate = 0.02;
+  private static final double oddNumberAnnualRate = 0.03;
 
   public static int calculateGoalMoney(int capital, int year) {
     // 関数を完成させてください

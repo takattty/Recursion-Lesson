@@ -1,12 +1,12 @@
 package problem.easy;
 
 public class Animal {
-    public String name;
-    public double weightKg;
-    public double heightM;
-    public boolean isPredator;
-    public double speedKpg;
-    public double activityMultiplier;
+    public final String name;
+    public final double weightKg;
+    public final double heightM;
+    public final boolean isPredator;
+    public final double speedKpg;
+    public final double activityMultiplier;
 
     Animal(String name, double weightKg, double heightM, boolean isPredator, double speedKpg) {
         this.name = name;

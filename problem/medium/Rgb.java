@@ -3,9 +3,9 @@ package problem.medium;
 import java.util.Map;
 
 public class Rgb {
-    public int red;
-    public int green;
-    public int blue;
+    public final int red;
+    public final int green;
+    public final int blue;
 
     Rgb(int red, int green, int blue) {
         this.red = red;
@@ -14,15 +14,11 @@ public class Rgb {
     }
 
     public String getHexCode() {
-        return getHexCodePrefix() + getHex();
+        return "#" + getHex();
     }
 
     public String getHex() {
         return String.format("%02X%02X%02X", red, green, blue).toLowerCase();
-    }
-
-    private String getHexCodePrefix() {
-        return "#";
     }
 
     public String getBits() {

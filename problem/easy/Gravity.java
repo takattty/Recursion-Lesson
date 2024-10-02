@@ -1,14 +1,14 @@
 package problem.easy;
 
 public class Gravity {
-    private static double earthGravity = 9.8;
-    private static double jupiterGravity = 24.79;
-    private static double mercuryGravity = 3.7;
-    private static double otherGravity = 0;
+    private static final double earthGravity = 9.8;
+    private static final double jupiterGravity = 24.79;
+    private static final double mercuryGravity = 3.7;
+    private static final double otherGravity = 0;
 
     public static int fallingDistance(String planet, int time) {
         // 関数を完成させてください
-        return calcMerteToMile((1 / 2) * calcGravity(planet) * Math.pow(time, 2));
+        return calcMerteToMile(((double) 1 / 2) * calcGravity(planet) * Math.pow(time, 2));
     }
 
     private static double calcGravity(String planet) {

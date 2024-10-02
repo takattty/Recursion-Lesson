@@ -1,9 +1,5 @@
 package problem.easy;
 
-import java.text.DecimalFormat;
-import java.text.DecimalFormatSymbols;
-import java.util.Locale;
-
 public class Restran {
 
   public static double processPayment(String creditCardType, int cost) {
@@ -16,9 +12,7 @@ public class Restran {
   }
 
   private static boolean isNotSupportCard(String creditCardType) {
-    if (creditCardType.equals("Visa") || creditCardType.equals("MasterCard"))
-      return false;
-    return true;
+      return !creditCardType.equals("Visa") && !creditCardType.equals("MasterCard");
   }
 
   private static double calcTotalPrice(int cost) {

@@ -1,12 +1,12 @@
 package problem.easy;
 
 public class Tax {
-  private static double federalTax = 0.21;
-  private static double azTax = 0.049;
-  private static double caTax = 0.0884;
-  private static double txTax = 0;
-  private static double ncTax = 0.025;
-  private static double otherTax = 0.05;
+  private static final double federalTax = 0.21;
+  private static final double azTax = 0.049;
+  private static final double caTax = 0.0884;
+  private static final double txTax = 0;
+  private static final double ncTax = 0.025;
+  private static final double otherTax = 0.05;
 
   public static int calculateCorporationTax(String state, int year, int profit) {
     if (isLeapDay(year)) {

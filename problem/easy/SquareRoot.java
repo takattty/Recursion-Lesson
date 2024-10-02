@@ -15,8 +15,8 @@ public class SquareRoot {
         // 新しい近似値は、2 つの近似値の平均から求めます
         double newGuess = (guess + x/guess)/2;
 
-        System.out.println("guess : " + String.valueOf(guess));
-        System.out.println("newGuess : " + String.valueOf(newGuess));
+        System.out.println("guess : " + guess);
+        System.out.println("newGuess : " + newGuess);
 
         // 相対誤差が 0.01 未満であることがベースケースです
         if(isSquareRootCloseEnough(newGuess,guess)) {

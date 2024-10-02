@@ -1,10 +1,6 @@
 package problem.easy;
 
 public class HowLongToReachFundGoalSample {
-    public static void main(String[] args) {
-
-    }
-
     /**
     * 毎年の土地価格と年利を含めた投資額を比較し、購入できるまでの投資年数を計算結果を返す
      * @return year 購入出来るまでの投資年数<p>

@@ -21,8 +21,8 @@ public class InvoiceItem {
         System.out.println(firstItem.next.next.product.title);
     }
 
-    Product product;
-    int quantity;
+    final Product product;
+    final int quantity;
     InvoiceItem next;
 
     public InvoiceItem(Product product, int quantity, InvoiceItem next) {
