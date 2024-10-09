@@ -40,7 +40,7 @@ public class IsPrime {
         }
 
         if (number == 2) {
-            return isPrime;
+            return true;
         }
 
         for (int i = 2; i < number; i++) {
