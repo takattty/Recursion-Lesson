@@ -1,8 +1,8 @@
 package problem.easy;
 
 public class divideBy3Count {
-    public static int main(int n){
-        return culc(n, 0);
+    public static void main(String[] arg) {
+        System.out.println(culc(10, 0));
     }
 
     private static int culc(int n, int count) {
