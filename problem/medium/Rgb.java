@@ -40,8 +40,10 @@ public class Rgb {
         Map<String, Integer> colorMap = Map.of("red", red, "green", green, "blue", blue);
         return colorMap.entrySet().stream()
                 .max(Map.Entry.comparingByValue()) // Map.Entry.comparingByValue()はentrySetのvalueを見て処理を行う
+                // でmaxのkey:valueを選択し↓に繋げる
                 .map(Map.Entry::getKey)
 //                .map(x -> x.getKey()) // ラムダ式の方。上の処理はメソッド参照だけど、どうして上記の書き方かいまいちわかっていない
+                // めちゃ簡単で、getKey()がMap.Entryインターフェースで定義されているメソッドだから
                 .orElse("");
     }
 }
