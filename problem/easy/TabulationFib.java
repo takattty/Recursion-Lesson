@@ -21,6 +21,7 @@ public class TabulationFib {
     }
 
     public static void main(String[] args){
+        // こっちの方は小さい値からnまでを計算していく。
         System.out.println(tabulationFib(50));
     }
 }
