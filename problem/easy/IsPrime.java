@@ -32,6 +32,7 @@ public class IsPrime {
         System.out.println(isPrimes(17));
     }
 
+    // 素数問題の基本的な計算
     public static boolean isPrime(int number){
         boolean isPrime = true;
 
