@@ -10,6 +10,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class HasSameTypeTest {
     @ParameterizedTest(name = "{0}と{1}のパターンマッチング")
+    // ここのCSVは型の恩恵がない
     @CsvSource({
             "aabb,  yyza,   false",
             "aappl, bbtte,  true",
