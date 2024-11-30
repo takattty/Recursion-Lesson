@@ -39,6 +39,7 @@ public class HasSameType {
 //    }
 
     // リファクタ
+    // この部分用の中身を確認する
     public static boolean hasSameType(String user1, String user2) {
         if (user1 == null || user2 == null || user1.length() != user2.length()) {
             return false;
